@@ -126,11 +126,11 @@ class IsolateHolderService : Service() {
             }
         }
 
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.UPSIDE_DOWN_CAKE) {
+        if (Build.VERSION.SDK_INT >= 34) {
             startForeground(
                 1,
                 notification,
-                ServiceInfo.FOREGROUND_SERVICE_TYPE_SPECIAL_USE);
+                0x00000002);
         } else {
             startForeground(
                 1,
